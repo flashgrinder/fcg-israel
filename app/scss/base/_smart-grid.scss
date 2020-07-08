@@ -2,6 +2,7 @@ $columns: 12;
 $atom: (100% / $columns);
 
 $break_xl: 1200px;
+$break_xls: 1024px;
 $break_lg: 992px;
 $break_md: 768px;
 $break_sm: 576px;
@@ -9,24 +10,38 @@ $break_xs: 400px;
 
 $offset: 30px;
 $offset_xl: $offset;
+$offset_xls: $offset;
 $offset_lg: $offset;
-$offset_md: $offset;
-$offset_sm: $offset;
+$offset_md: 20px;
+$offset_sm: 10px;
 $offset_xs: 10px;
 
 $offset_one_side: ($offset / 2);
 $offset_xl_one_side: ($offset_xl / 2);
+$offset_xls_one_side: ($offset_xls / 2);
 $offset_lg_one_side: ($offset_lg / 2);
 $offset_md_one_side: ($offset_md / 2);
 $offset_sm_one_side: ($offset_sm / 2);
 $offset_xs_one_side: ($offset_xs / 2);
 
 $fields: 30px;
-$fields_xs: 5px;
+$fields_md: 10px;
+$fields_sm: 5px;
+$fields_xs: 10px;
 
 @mixin wrapper-full(){
     padding-left: $fields;
     padding-right: $fields;
+
+    @include md-block(){
+        padding-left: $fields_md;
+        padding-right: $fields_md;
+    }
+
+    @include sm-block(){
+        padding-left: $fields_sm;
+        padding-right: $fields_sm;
+    }
 
     @include xs-block(){
         padding-left: $fields_xs;
@@ -38,6 +53,16 @@ $fields_xs: 5px;
     margin-left: ($offset_one_side * -1);
     margin-right: ($offset_one_side * -1);
 
+    @include md-block(){
+        margin-left: ($offset_md_one_side * -1);
+        margin-right: ($offset_md_one_side * -1);
+    }
+
+    @include sm-block(){
+        margin-left: ($offset_sm_one_side * -1);
+        margin-right: ($offset_sm_one_side * -1);
+    }
+
     @include xs-block(){
         margin-left: ($offset_xs_one_side * -1);
         margin-right: ($offset_xs_one_side * -1);
@@ -48,6 +73,16 @@ $fields_xs: 5px;
     #{$type}-left: $offset_one_side;
     #{$type}-right: $offset_one_side;
 
+    @include md-block(){
+        #{$type}-left: $offset_md_one_side;
+        #{$type}-right: $offset_md_one_side;
+    }
+
+    @include sm-block(){
+        #{$type}-left: $offset_sm_one_side;
+        #{$type}-right: $offset_sm_one_side;
+    }
+
     @include xs-block(){
         #{$type}-left: $offset_xs_one_side;
         #{$type}-right: $offset_xs_one_side;
@@ -55,7 +90,7 @@ $fields_xs: 5px;
 }
 
 @mixin wrapper(){
-    max-width: 1110px;
+    max-width: 1280px;
     margin: 0 auto;
     @include wrapper-full();
 }
@@ -103,6 +138,11 @@ $fields_xs: 5px;
 @mixin size-xl($n){
     $val: 100% / $columns * $n;
     @include xl(width, #{calc(#{$val} - #{$offset_xl})});
+}
+
+@mixin size-xls($n){
+    $val: 100% / $columns * $n;
+    @include xls(width, #{calc(#{$val} - #{$offset_xls})});
 }
 
 @mixin size-lg($n){
@@ -187,6 +227,38 @@ $fields_xs: 5px;
 @mixin shift-xl-padding-right($n){
     $val: 100% / $columns * $n;
     @include xl(padding-right, #{calc(#{$val} + #{$offset_xl_one_side})});
+}
+
+@mixin shift-xls($n){
+    $val: 100% / $columns * $n;
+    @include xls(margin-left, #{calc(#{$val} + #{$offset_xls_one_side})});
+    @include xls(margin-right, #{calc(#{$val} + #{$offset_xls_one_side})});
+}
+
+@mixin shift-xls-left($n){
+    $val: 100% / $columns * $n;
+    @include xls(margin-left, #{calc(#{$val} + #{$offset_xls_one_side})});
+}
+
+@mixin shift-xls-right($n){
+    $val: 100% / $columns * $n;
+    @include xls(margin-right, #{calc(#{$val} + #{$offset_xls_one_side})});
+}
+
+@mixin shift-xls-padding($n){
+    $val: 100% / $columns * $n;
+    @include xls(padding-left, #{calc(#{$val} + #{$offset_xls_one_side})});
+    @include xls(padding-right, #{calc(#{$val} + #{$offset_xls_one_side})});
+}
+
+@mixin shift-xls-padding-left($n){
+    $val: 100% / $columns * $n;
+    @include xls(padding-left, #{calc(#{$val} + #{$offset_xls_one_side})});
+}
+
+@mixin shift-xls-padding-right($n){
+    $val: 100% / $columns * $n;
+    @include xls(padding-right, #{calc(#{$val} + #{$offset_xls_one_side})});
 }
 
 @mixin shift-lg($n){
@@ -325,6 +397,18 @@ $fields_xs: 5px;
 
 @mixin xl-block(){
     @media screen and (max-width: $break_xl){
+        @content;
+    }
+}
+
+@mixin xls($name, $value){
+    @media screen and (max-width: $break_xls){
+        #{$name}: $value;
+    }
+}
+
+@mixin xls-block(){
+    @media screen and (max-width: $break_xls){
         @content;
     }
 }
@@ -478,6 +562,8 @@ $fields_xs: 5px;
             > div{
                 @include col();
                 @include size(1);
+                @include size-md(1);
+                @include size-sm(1);
                 @include size-xs(1);
                 height: inherit;
                 outline: $outline;
