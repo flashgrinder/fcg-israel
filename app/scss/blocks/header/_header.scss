@@ -1,0 +1,19 @@
+.header {
+    display: none;
+    position: sticky;
+    top: 0;
+    padding: 15px 0;
+    background: radial-gradient(78.07% 319.9% at 2.37% 101.28%, #213155 0%, #5FB2D6 100%), #4A72CE;
+    background-color: transparent;
+    z-index: 100;
+    &__body {
+        position: relative;
+        z-index: 10;
+        opacity: 1;
+    }
+    &__logo {
+        position: relative;
+        z-index: 10;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,33 @@
+.main-screen {
+    position: relative;
+    background-color: transparent;
+    &__body {
+        display: flex;
+        justify-content: flex-start;
+        height: 100vh;
+    }
+    &__text {
+        position: relative;
+        z-index: 10;
+        margin-top: 200px;
+        max-width: 600px;
+    }
+    &__heading {
+        margin-top: 60px;
+    }
+    &__descr {
+        margin-top: 40px;
+    }
+    &__actions {
+        margin-top: 60px;
+    }
+    &__bg {
+        position: absolute;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: url(../img/bg-rocket.svg) bottom right/100% auto no-repeat;
+    }
+}

@@ -1,20 +1,47 @@
 @font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/Roboto/Roboto-Regular.eot');
-	src: url('../fonts/Roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
-	url('../fonts/Roboto/Roboto-Regular.woff') format('woff'),
-	url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
-	font-weight: 400;
+    font-family: 'Gotham Pro';
+    font-display: swap;
+	src: url('../fonts/GothamPro/GothamPro-Bold.eot');
+	src: local('../fonts/GothamPro/Gotham Pro Bold'), local('GothamPro-Bold'),
+		url('../fonts/GothamPro/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro/GothamPro-Bold.woff') format('woff'),
+		url('../fonts/GothamPro/GothamPro-Bold.ttf') format('truetype');
+	font-weight: bold;
 	font-style: normal;
 }
+
 @font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/Roboto/Roboto-Bold.eot');
-	src: url('../fonts/Roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
-	url('../fonts/Roboto/Roboto-Bold.woff') format('woff'),
-	url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
-	font-weight: 700;
+    font-family: 'Gotham Pro';
+    font-display: swap;
+	src: url('../fonts/GothamPro/GothamPro-Black.eot');
+	src: local('../fonts/GothamPro/Gotham Pro Black'), local('GothamPro-Black'),
+		url('../fonts/GothamPro/GothamPro-Black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro/GothamPro-Black.woff') format('woff'),
+		url('../fonts/GothamPro/GothamPro-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    font-display: swap;
+	src: url('../fonts/GothamPro/GothamPro-Medium.eot');
+	src: local('../fonts/GothamPro/Gotham Pro Medium'), local('GothamPro-Medium'),
+		url('../fonts/GothamPro/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro/GothamPro-Medium.woff') format('woff'),
+		url('../fonts/GothamPro/GothamPro-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    font-display: swap;
+	src: url('../fonts/GothamPro/GothamPro.eot');
+	src: local('../fonts/GothamPro/Gotham Pro'), local('GothamPro'),
+		url('../fonts/GothamPro/GothamPro.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro/GothamPro.woff') format('woff'),
+		url('../fonts/GothamPro/GothamPro.ttf') format('truetype');
+	font-weight: normal;
 	font-style: normal;
 }

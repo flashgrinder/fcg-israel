@@ -71,13 +71,11 @@
     font-family: var(--font-gotham);
     font-style: normal;
     margin: 0;
-    &_big {
-		@include xls(font-size, 28px);
-		@include sm(font-size, 20px);
-		font-size: 38px;
+    &_large {
+		font-size: 26px;
     }
-    &_medium {
-        font-size: 24px;
+    &_small {
+        font-size: 18px;
     }
     &_blue {
         color: var(--color-blue);
@@ -102,16 +100,6 @@
 	}
 }
 
-.title-second {
-    font-family: var(--font-roboto);
-    font-style: normal;
-    font-weight: 900;
-    font-size: 18px;
-    line-height: 100%;
-    color: var(--color-blue);
-    margin: 0;
-}
-
 /* Text */
 
 .text {
@@ -126,6 +114,9 @@
 	} 
 	&_white-gray {
 		color: var(--color-white-gray);
+	}
+	&_s-big {
+		font-size: 22px;
 	}
 	&_s-normal {
 		font-size: 16px;
