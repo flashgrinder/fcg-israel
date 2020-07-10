@@ -1,6 +1,7 @@
 .main-screen {
     position: relative;
     background-color: transparent;
+    overflow-x: hidden;
     &__body {
         display: flex;
         justify-content: flex-start;

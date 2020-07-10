@@ -298,6 +298,7 @@ img {
 .main-screen {
   position: relative;
   background-color: transparent;
+  overflow-x: hidden;
 }
 
 .main-screen__body {
