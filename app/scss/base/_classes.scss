@@ -106,6 +106,9 @@
     font-family: var(--font-roboto);
     font-style: normal;
     margin: 0;
+	&_blue {
+		color: var(--color-blue); 
+	}
 	&_dark {
 		color: var(--color-dark); 
 	}

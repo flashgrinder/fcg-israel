@@ -1,0 +1,35 @@
+.make {
+    padding: 30px 0;
+    &__heading {
+        margin-bottom: 60px;
+    }
+    &__grid {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-rows: 300px 300px;
+        grid-auto-rows: 300px;
+        max-width: 900px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    &__cart {
+        background-color: var(--color-white);
+        text-align: center;
+        box-shadow: 0px 4px 35px rgba(74, 114, 206, 0.25);
+        border-radius: 10px;
+        padding: 40px 38px;
+        cursor: pointer;
+    }
+    &__svg {
+        height: 130px;
+        transition: .3s ease-in-out;
+        transform: scale(0.9);
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &__descr {
+        margin-top: 50px;
+    }
+}
