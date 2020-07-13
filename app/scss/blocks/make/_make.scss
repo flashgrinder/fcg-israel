@@ -1,5 +1,6 @@
 .make {
-    padding: 30px 0;
+    padding: 60px 0;
+    margin-top: -1px;
     &__heading {
         margin-bottom: 60px;
     }
@@ -20,14 +21,14 @@
         border-radius: 10px;
         padding: 40px 38px;
         cursor: pointer;
+        &:hover .make__svg {
+            transform: scale(1.1);
+        }
     }
     &__svg {
         height: 130px;
         transition: .3s ease-in-out;
         transform: scale(0.9);
-        &:hover {
-            transform: scale(1.1);
-        }
     }
     &__descr {
         margin-top: 50px;

@@ -1,0 +1,109 @@
+.why {
+    position: relative;
+    padding: 60px 0;
+    background: radial-gradient(70.3% 288.07% at 1.17% 101.28%, #213155 0%, #4A72CE 100%), #4A72CE;
+    z-index: 10;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        mix-blend-mode: overlay;
+        background: url('../img/bg-logo.png') right 100% no-repeat;
+        background-size: 712px/428px;
+    }
+    &__heading {
+        margin-bottom: 60px;
+    }
+    &__grid {
+        display: grid;
+        grid-column-gap: 80px;
+        grid-row-gap: 120px;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        justify-content: space-between;
+    }
+    &__cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        &:hover .why__img::before {
+            transform: translate(0px);
+        }
+        &:hover .why__title::before {
+            width: 100%;
+        }
+        &:hover .why__text::before {
+            width: 30px;
+            height: 80%;
+            border-top: 2px solid var(--color-light-blue);
+            border-left: 2px solid var(--color-light-blue);
+        }
+    }
+    &__img {
+        position: relative;
+        text-align: center;
+        width: 130px;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--color-light-blue);
+        border-radius: 50%;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: var(--color-light-blue);
+            border-radius: 50%;
+            transition: .3s ease-in-out;
+            transform: translate(30px, -20px);
+            z-index: -1;
+        }
+    }
+    &__pic {
+        display: block;
+        height: auto;
+        object-fit: contain;
+    }
+    &__text {
+        max-width: 285px;
+        margin-top: 40px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 5%;
+            left: -20px;
+            width: 0px;
+            height: 0%;
+            border-top: 2px solid transparent;
+            border-left: 2px solid transparent;
+            transition: .3s ease-in-out;
+        }
+    }
+    &__title {
+        position: relative;
+        z-index: 10;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            top: -10px;
+            left: 10px;
+            background-color: var(--color-light-blue);
+            transition: .9s ease-in-out;
+            z-index: -1;
+        }
+    }
+    &__descr {
+        position: relative;
+        margin-top: 25px;
+    }
+}
