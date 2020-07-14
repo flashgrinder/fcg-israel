@@ -744,6 +744,10 @@ img {
           align-self: center;
 }
 
+.l-description__actions {
+  margin-top: 60px;
+}
+
 .l-description__title {
   text-align: left;
   margin-bottom: 50px;

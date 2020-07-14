@@ -35,7 +35,10 @@
 		&_position_center{
 			align-self: center;
 		}
-	}
+    }
+    &__actions {
+        margin-top: 60px;
+    }
 	&__title {
 		@include md(margin-bottom, 30px);
 		text-align: left;
