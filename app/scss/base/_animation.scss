@@ -1,0 +1,47 @@
+.anim-around-right {
+    animation: around-rotate-right 6s linear infinite;
+}
+
+.anim-around-left {
+    animation: around-rotate-left 6s linear infinite;
+}
+
+.anim-soar{
+    animation: box-soar 6s linear infinite;
+}
+
+@keyframes around-rotate-right {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes around-rotate-left {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes box-soar {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,57 @@
+.l-description {
+	padding: 60px 0;
+	&__grid {
+		@include lg-block {
+			grid-column-gap: 10px;
+		}
+		@include sm-block {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-areas:
+				"left-column"
+				"right-column";
+			grid-row-gap: 30px;
+		}
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 30px;
+		grid-template-areas: 
+			"left-column right-column";
+		align-items: stretch;
+		&_revers {
+			@include sm-block {
+				grid-template-areas:
+					"right-column"
+					"left-column";
+			}
+		}
+	}
+	&__column {
+		&:first-child {
+			grid-area: left-column;
+		}
+		&:last-child {
+			grid-area: right-column;
+		}
+		&_position_center{
+			align-self: center;
+		}
+	}
+	&__title {
+		@include md(margin-bottom, 30px);
+		text-align: left;
+		margin-bottom: 50px;
+		&_center {
+			text-align: center;
+		}
+	}
+	&__text ~ &__text {
+		margin-top: 30px;
+	}
+	&__img {
+		height: auto;
+    }
+    &__svg {
+        width: 100%;
+        height: auto;
+    }
+}

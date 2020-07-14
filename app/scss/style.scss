@@ -6,8 +6,12 @@
 @import "./base/variables";
 /* Base */
 @import "./base/base";
+/* Animation */
+@import "./base/animation";
 /* Base Classes */
 @import "./base/classes";
+/* SVG */
+@import "./base/svg";
 /* Blocks */
 /* Page */
 @import "./blocks/page/page";
@@ -27,3 +31,7 @@
 @import "./blocks/make/make";
 /* Why */
 @import "./blocks/why/why";
+/* L-description */
+@import "./blocks/l-description/l-description";
+/* Checklist */
+@import "./blocks/checklist/checklist";
