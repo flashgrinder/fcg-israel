@@ -1,0 +1,54 @@
+.profile-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    text-align: center;
+    &_director {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+    }
+    &__ava {
+        overflow: hidden;
+        border: 1px solid var(--color-dark-opacity-50);
+        border-radius: 50%;
+        object-fit: cover;
+        width: 100%;
+        &_director {
+            min-height: 152px;
+            max-height: 152px;
+            max-width: 150px;
+        }
+        &_worker {
+            min-height: 120px;
+            max-height: 120px;
+            max-width: 120px;
+        }
+    }
+    &__img {
+        display: block;
+        object-fit: cover;
+        border-radius: 50%;
+        &_director {
+            width: 152px;
+            height: 152px;
+        }
+        &_worker {
+            width: 120px;
+            height: 120px;
+        }
+    }
+    &__text {
+        margin-top: 18px;
+        &_director {
+            margin-left: 30px;
+        }
+    }
+    &__descr {
+        margin-top: 20px;
+        max-width: 220px;
+    }
+}

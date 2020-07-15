@@ -1,0 +1,64 @@
+.team {
+    padding: 60px 0;
+    position: relative;
+    z-index: 10;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI5NCIgaGVpZ2h0PSI5NTQiIHZpZXdCb3g9IjAgMCAxMjk0IDk1NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggb3BhY2l0eT0iMC4xOCIgZD0iTTI4Ny40MjUgODUxLjY1NEMyNDMuMTcxIDgwNC4yNzYgMjE1LjYxMiA3NDUuMzcgMTc3LjQ3MiA2OTMuNjE3QzE0OS4yNTUgNjU0Ljk0NiAxMTQuODMgNjIwLjMyMSA4Ni4xNDIyIDU4MS44MTRDMjguOTU1NCA1MDUuMTI1IC01LjU2MzYxIDQxMS42MzUgMC43MzgyMTkgMzE4LjIyN0M3LjA0MDA1IDIyNC44MTkgNTcuMTcyNSAxMzIuNTk3IDE0MC43NDIgODEuNDU3NUMxOTIuMDUxIDUwLjAyMTcgMjUyLjc2NCAzNS4xMDA5IDMxMy4xNDkgMjUuNDEyN0M1MTYuNDU0IC03LjI5MDM2IDc0MC43NzYgLTIyLjgyNDIgOTE0LjUgODEuNDU3NUM5ODIgMTI1LjUgOTY3LjM2NCAxNjAuMjcyIDk5OS43MiAxNzMuODQ0QzEwODIuODIgMjA4Ljc1NCAxMTkwLjYxIDIwMC42NiAxMjUwLjg1IDI2NC43NThDMTI4Ny4xMSAzMDMuMzQ3IDEyOTUuMTEgMzU4LjUzNCAxMjkzLjg4IDQxMEMxMjkyLjQzIDQ3MS44MDkgMTI3OC41MSA1MzYuNzI0IDEyMzUuMTkgNTgzLjA4MUMxMTc4Ljc2IDY0My44NjggMTA4Ni41OCA2NjAuMTM3IDEwMTAuMyA2OTcuNTQxQzkzNS45NDkgNzMzLjgwMSA4NzUuOTg3IDc5MC44MjcgODEyLjEyMyA4NDEuNzYyQzY1OC40OCA5NjQuMzU3IDQzNy40NDYgMTAxMi4yNyAyODcuNDI1IDg1MS42NTRaIiBmaWxsPSIjMzlFQUM1Ii8+Cjwvc3ZnPgo=");
+        background-repeat: no-repeat;
+        background-position: center top;
+        z-index: -1;
+    }
+    &__heading {
+        margin-bottom: 60px;
+    }
+    &__grid {
+        display: grid;
+        grid-column-gap: 80px;
+        grid-row-gap: 80px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "head-left head-right"
+            "left right";
+        place-items: start center;
+        @include lg-block{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas: 
+            "head-left" 
+            "head-right"
+            "left"
+            "right";
+        }
+        width: 100%;
+        padding: 40px 80px;
+        box-shadow: 0px 4px 35px rgba(74, 114, 206, 0.25);
+        border-radius: 10px;
+    }
+    &__head-left {
+        grid-area: head-left;
+        // padding-left: 40px;
+    }
+    &__head-right {
+        grid-area: head-right;
+        // padding-left: 40px;
+    }
+    &__column-left {
+        grid-area: left;
+    }
+    &__column-right {
+        grid-area: right;
+    }
+    &__column-left, &__column-right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 300px 300px;
+        grid-row-gap: 40px;
+        grid-column-gap: 60px;
+        place-items: stretch;
+    }
+}
