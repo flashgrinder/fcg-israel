@@ -1,0 +1,25 @@
+.footer {
+    padding: 40px 0;
+    background: radial-gradient(78.07% 319.9% at 2.37% 101.28%, #213155 0%, #5FB2D6 100%), #4A72CE;
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__row {
+        display: flex;
+        justify-content: center;
+    }
+    &__links {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0 0;
+    }
+    &__item ~ &__item {
+        margin-top: 20px;
+    }
+    &__link {
+        text-decoration: none;
+    }
+}
+
