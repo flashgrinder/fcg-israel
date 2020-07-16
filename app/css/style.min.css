@@ -85,11 +85,6 @@ img {
           animation: box-soar 6s linear infinite;
 }
 
-.anim-ticker-rtl {
-  -webkit-animation: ticker-rtl 16s linear infinite;
-          animation: ticker-rtl 16s linear infinite;
-}
-
 @-webkit-keyframes around-rotate-right {
   0% {
     -webkit-transform: rotate(0deg);
@@ -189,30 +184,6 @@ img {
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
-  }
-}
-
-@-webkit-keyframes ticker-rtl {
-  0% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-  }
-
-  100% {
-    -webkit-transform: translate(100%, 0);
-            transform: translate(100%, 0);
-  }
-}
-
-@keyframes ticker-rtl {
-  0% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-  }
-
-  100% {
-    -webkit-transform: translate(100%, 0);
-            transform: translate(100%, 0);
   }
 }
 
