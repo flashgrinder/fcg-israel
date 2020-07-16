@@ -1,0 +1,20 @@
+.clients {
+    padding: 60px 0;
+    &__heading {
+        margin-bottom: 60px;
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    &__link {
+        text-decoration: none;
+    }
+    &__link ~ &__link {
+        margin-left: 85px;
+    }
+    &__glide-slides {
+        align-items: center;
+    }
+}

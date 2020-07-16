@@ -46,7 +46,7 @@
   --color-aquamarine: #39EAC5;
   --color-dark: #555555;
   --color-dark-opacity-50: rgba(85, 85, 85, 0.5);
-  --color-gray: #EFEFEF;
+  --color-gray: #FAF9F9;
   --color-white: #FFFFFF;
   --color-dark-gray: #A9A9A9;
   --color-white-gray: #E5E5E5;
@@ -83,6 +83,11 @@ img {
 .anim-soar {
   -webkit-animation: box-soar 6s linear infinite;
           animation: box-soar 6s linear infinite;
+}
+
+.anim-ticker-rtl {
+  -webkit-animation: ticker-rtl 16s linear infinite;
+          animation: ticker-rtl 16s linear infinite;
 }
 
 @-webkit-keyframes around-rotate-right {
@@ -184,6 +189,30 @@ img {
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes ticker-rtl {
+  0% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+}
+
+@keyframes ticker-rtl {
+  0% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
   }
 }
 
@@ -944,7 +973,6 @@ img {
 
 .profile-cart__ava {
   overflow: hidden;
-  border: 1px solid var(--color-dark-opacity-50);
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -992,6 +1020,138 @@ img {
   margin-top: 20px;
   max-width: 220px;
 }
+
+/* Clients */
+
+.clients {
+  padding: 60px 0;
+}
+
+.clients__heading {
+  margin-bottom: 60px;
+}
+
+.clients__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+
+.clients__link {
+  text-decoration: none;
+}
+
+.clients__link ~ .clients__link {
+  margin-left: 85px;
+}
+
+.clients__glide-slides {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+
+/* ANOTHER MODULES */
+
+/* ANOTHER MODULES */
+
+/* ANOTHER MODULES */
+
+/* Glide.js Slider */
+
+.glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.glide * {
+  box-sizing: inherit;
+}
+
+.glide__track {
+  overflow: hidden;
+}
+
+.glide__slides {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  touch-action: pan-Y;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  will-change: transform;
+}
+
+.glide__slides--dragging {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.glide__slide {
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+  white-space: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.glide__slide a {
+  -webkit-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.glide__arrows {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.glide__bullets {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.glide--rtl {
+  direction: rtl;
+}
+
+/* ANOTHER MODULES */
+
+/* ANOTHER MODULES */
+
+/* ANOTHER MODULES */
 
 @media screen and (max-width: 1024px) {
   .hide-xls {

@@ -10,6 +10,10 @@
     animation: box-soar 6s linear infinite;
 }
 
+.anim-ticker-rtl {
+    animation: ticker-rtl 16s linear infinite;
+}
+
 @keyframes around-rotate-right {
     0% {
         transform: rotate(0deg);
@@ -45,3 +49,12 @@
         transform: translateY(0px);
     }
 }
+
+@keyframes ticker-rtl {
+    0% {
+      transform: translate(-100%, 0);
+    }
+    100% {
+      transform: translate(100%, 0);
+    }
+  }
