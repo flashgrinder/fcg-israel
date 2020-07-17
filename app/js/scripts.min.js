@@ -22,7 +22,21 @@ document.addEventListener('DOMContentLoaded', function () {
         perView: 4,
         autoplay: 500,
         animationDuration: 8000,
-        animationTimingFunc: 'linear'
+        animationTimingFunc: 'linear',
+        breakpoints: {
+            1024: {
+              perView: 4
+            },
+            768: {
+              perView: 3
+            },
+            576: {
+              perView: 2
+            },
+            400: {
+              perView: 1
+            }
+        }
     });
 
     glide.mount();

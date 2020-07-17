@@ -1,20 +1,29 @@
 .clients {
     padding: 60px 0;
     &__heading {
+        @include md(margin-bottom, 30px);
         margin-bottom: 60px;
     }
     &__row {
+        @include md(flex-wrap, wrap);
+        @include sm(flex-direction, column);
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
     &__link {
+        @include md(margin-top, 30px);
         text-decoration: none;
     }
     &__link ~ &__link {
+        @include sm-block {
+            margin-left: 0;
+            margin-top: 60px;
+        }
         margin-left: 85px;
     }
     &__glide-slides {
+        text-align: center;
         align-items: center;
     }
 }
