@@ -37,10 +37,12 @@
 		}
     }
     &__actions {
+        @include sm(text-align, center);
         margin-top: 60px;
     }
 	&__title {
-		@include md(margin-bottom, 30px);
+        @include md(margin-bottom, 30px);
+        @include sm(text-align, center);
 		text-align: left;
 		margin-bottom: 50px;
 		&_center {
