@@ -2,6 +2,9 @@
     padding: 40px 0;
     background: radial-gradient(78.07% 319.9% at 2.37% 101.28%, #213155 0%, #5FB2D6 100%), #4A72CE;
     &__body {
+        @include sm-block {
+            flex-direction: column;
+        }
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -20,6 +23,12 @@
     }
     &__link {
         text-decoration: none;
+    }
+    &__socials {
+        @include sm(margin-top, 40px);
+    }
+    &__contact-phone {
+        @include sm(margin-top, 40px);
     }
 }
 
