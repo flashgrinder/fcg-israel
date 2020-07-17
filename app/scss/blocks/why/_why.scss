@@ -19,6 +19,9 @@
         margin-bottom: 60px;
     }
     &__grid {
+        @include sm-block {
+            grid-row-gap: 60px;
+        }
         display: grid;
         grid-column-gap: 80px;
         grid-row-gap: 120px;
@@ -88,6 +91,7 @@
         }
     }
     &__title {
+        @include sm(text-align, center);
         position: relative;
         z-index: 10;
         &::before {
@@ -103,6 +107,7 @@
         }
     }
     &__descr {
+        @include sm(text-align, center);
         position: relative;
         margin-top: 25px;
     }

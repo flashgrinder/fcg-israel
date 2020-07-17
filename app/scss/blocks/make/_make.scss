@@ -5,6 +5,9 @@
         margin-bottom: 60px;
     }
     &__grid {
+        @include md-block {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+        }
         display: grid;
         grid-gap: 30px;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

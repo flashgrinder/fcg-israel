@@ -1290,6 +1290,10 @@ img {
     display: none !important;
   }
 
+  .make__grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+  }
+
   .l-description__title {
     margin-bottom: 30px;
   }
@@ -1345,6 +1349,18 @@ img {
 
   .hide-sm {
     display: none !important;
+  }
+
+  .why__grid {
+    grid-row-gap: 60px;
+  }
+
+  .why__title {
+    text-align: center;
+  }
+
+  .why__descr {
+    text-align: center;
   }
 
   .l-description__grid {
