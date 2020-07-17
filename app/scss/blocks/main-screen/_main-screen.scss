@@ -1,19 +1,52 @@
 .main-screen {
+    // @include sm(padding-bottom, 60px);
+    @media (max-height: 568px) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     position: relative;
     background-color: transparent;
-    overflow-x: hidden;
     &__body {
+        @include xls(height, 60vh);
+        @include sm(height, 100vh);
+        @media (min-height: 2000px) {
+            height: 30vh;
+        }
+        @media (min-height: 1700px) {
+            height: 50vh;
+        }
+        @media (max-height: 768px) {
+            height: 100vh;
+        }
+        @media (max-height: 568px) {
+            height: auto;
+        }
+        @media (max-height: 400px) {
+            height: auto;
+        }
         display: flex;
         justify-content: flex-start;
         height: 100vh;
     }
     &__text {
+        @include xls(margin-top, 150px);
+        @include lg(margin-top, 50px);
+        @include sm(margin-top, 200px);
+        @include xs(margin-top, 100px);
+        @media (max-height: 400px) {
+            margin-top: 50px;
+        }
         position: relative;
         z-index: 10;
         margin-top: 200px;
         max-width: 600px;
     }
     &__heading {
+        @include lg(margin-top, 40px);
+        @include sm-block {
+            font-size: 20px;
+            margin-top: 40px;
+        }
         margin-top: 60px;
     }
     &__descr {
@@ -22,6 +55,7 @@
         min-height: 60px;
     }
     &__slogan {
+        @include sm(font-size, 18px);
         position: absolute;
         left: 0;
         right: 0;
@@ -34,14 +68,20 @@
         }
     }
     &__actions {
+        @include lg(margin-top, 40px);
+        @include sm(margin-top, 40px);
         margin-top: 60px;
     }
     &__bg {
+        @include sm(display, none);
+        @media (max-height: 640px) {
+            display: none;
+        }
         position: absolute;
         z-index: 9;
         top: 0;
         left: 0;
-        bottom: 0;
+        bottom: -1px;
         right: 0;
         background: url(../img/bg-rocket.svg) bottom right/100% auto no-repeat;
     }

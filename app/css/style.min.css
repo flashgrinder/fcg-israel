@@ -443,7 +443,6 @@ img {
 .main-screen {
   position: relative;
   background-color: transparent;
-  overflow-x: hidden;
 }
 
 .main-screen__body {
@@ -498,7 +497,7 @@ img {
   z-index: 9;
   top: 0;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   right: 0;
   background: url(../img/bg-rocket.svg) bottom right/100% auto no-repeat;
 }
@@ -507,9 +506,9 @@ img {
 
 #particles-js {
   position: absolute;
-  top: -1;
+  top: 0;
   left: 0;
-  z-index: 9;
+  z-index: 1;
   height: 100%;
   width: 100%;
   background: radial-gradient(78.07% 319.9% at 2.37% 101.28%, #213155 0%, #5FB2D6 100%), #4A72CE;
@@ -1225,11 +1224,31 @@ img {
   .hide-xls {
     display: none !important;
   }
+
+  .main-screen__body {
+    height: 60vh;
+  }
+
+  .main-screen__text {
+    margin-top: 150px;
+  }
 }
 
 @media screen and (max-width: 992px) {
   .hide-lg {
     display: none !important;
+  }
+
+  .main-screen__text {
+    margin-top: 50px;
+  }
+
+  .main-screen__heading {
+    margin-top: 40px;
+  }
+
+  .main-screen__actions {
+    margin-top: 40px;
   }
 
   .l-description__grid {
@@ -1349,6 +1368,31 @@ img {
 
   .hide-sm {
     display: none !important;
+  }
+
+  .main-screen__body {
+    height: 100vh;
+  }
+
+  .main-screen__text {
+    margin-top: 200px;
+  }
+
+  .main-screen__heading {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+
+  .main-screen__slogan {
+    font-size: 18px;
+  }
+
+  .main-screen__actions {
+    margin-top: 40px;
+  }
+
+  .main-screen__bg {
+    display: none;
   }
 
   .why__grid {
@@ -1493,5 +1537,54 @@ img {
 
   .hide-xs {
     display: none !important;
+  }
+
+  .main-screen__text {
+    margin-top: 100px;
+  }
+}
+
+@media (max-height: 568px) {
+  .main-screen {
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  .main-screen__body {
+    height: auto;
+  }
+}
+
+@media (min-height: 2000px) {
+  .main-screen__body {
+    height: 30vh;
+  }
+}
+
+@media (min-height: 1700px) {
+  .main-screen__body {
+    height: 50vh;
+  }
+}
+
+@media (max-height: 768px) {
+  .main-screen__body {
+    height: 100vh;
+  }
+}
+
+@media (max-height: 400px) {
+  .main-screen__body {
+    height: auto;
+  }
+
+  .main-screen__text {
+    margin-top: 50px;
+  }
+}
+
+@media (max-height: 640px) {
+  .main-screen__bg {
+    display: none;
   }
 }
