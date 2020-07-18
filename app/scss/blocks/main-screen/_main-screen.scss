@@ -1,5 +1,4 @@
 .main-screen {
-    // @include sm(padding-bottom, 60px);
     @media (max-height: 568px) {
         height: auto;
         padding-bottom: 60px;
