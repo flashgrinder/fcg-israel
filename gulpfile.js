@@ -28,6 +28,7 @@ const source = {
 		sass:  './app/scss/*.scss',
 		fonts: './app/fonts/**/*.*',
 		img:   './app/img/**/*.*',
+		json:    './app/js/',
 		js:    './app/js/',
 		libs:  [
 			// './app/libs/jquery-3.3.1.js',
@@ -125,11 +126,17 @@ function styles() {
 	}))
 	.pipe(gulp.dest(source.build.css));
 }
+
+function json() {
+	return gulp.src(source.app.json + '*.json')
+	.pipe(gulp.dest(source.build.js));
+}
+
 // Собрать все скрипты.
 function scripts() {
 	return gulp.src(source.app.js + '*.js')
 	.pipe(babel({
-		presets: ['env']
+		presets: ['@babel/env']
 	}))
 	.on('error', console.error.bind(console))
 	.pipe(uglify({
@@ -191,7 +198,7 @@ function clean() {
 gulp.task('clean', clean);
 
 // Run the build - Запустить сборку
-gulp.task('build', gulp.series(clean, optimg, gulp.parallel(html, styles, scripts, mapjs, fonts)));
+gulp.task('build', gulp.series(clean, optimg, gulp.parallel(html, styles, scripts, json, mapjs, fonts)));
 
 gulp.task('dev', gulp.series('build'));
 
