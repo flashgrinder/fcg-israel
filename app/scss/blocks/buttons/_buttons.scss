@@ -9,7 +9,8 @@
 	padding: 14px 25px;
 	text-decoration: none;
 	color: var(--color-white);
-	border: none;
+    border: none;
+    cursor: pointer;
 	&-primary {
 		background: var(--color-light-blue);
 		transition: .2s linear;

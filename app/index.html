@@ -83,9 +83,9 @@
                     </div>
                     
                     <div class="main-screen__actions">
-                        <a href="#" class="button button-primary">
+                        <button href="#" class="button button-primary" data-modal-trigger="modal">
                             Заказать звонок
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -877,9 +877,9 @@
 							</li>
                         </ul>
                         <div class="l-description__actions">
-                            <a href="./" class="button button-primary">
+                            <button class="button button-primary" data-modal-trigger="modal">
                                 Заказать звонок
-                            </a>
+                            </button>
                         </div>
                     </div>
                     <div class="l-description__column l-description__column_position_center">
@@ -1457,6 +1457,39 @@
     </footer>
     <!-- /. Footer -->
 
+    <!-- MODAL TEST -->
+    <div class="modal" data-modal="modal">
+        <div class="modal__body">
+            <div class="modal__close">
+                <svg class="modal__close-svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+                    <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"/> 
+                </svg>
+            </div>
+            <div class="modal__header">
+                <h3 class="modal__title title title_large title_white title_w-medium">
+                    Заказать звонок
+                </h3>
+            </div>
+            <form class="modal__form" action="" >
+                <div class="modal__field">
+                    <input type="text" placeholder="Имя" class="modal__input">
+                </div>
+                <div class="modal__field">
+                    <input type="email" placeholder="Email" class="modal__input">
+                </div>
+                <div class="modal__field">
+                    <input type="tel" placeholder="Номер телефона" class="modal__input">
+                </div>
+                <div class="modal__actions">
+                    <input class="modal__btn button button-primary" type="submit" value="Отправить">
+                </div> 
+            </form>
+        </div>
+    </div>
+
+    
+        
+    
 
     
     <script src="libs/jquery-3.3.1.js"></script>
