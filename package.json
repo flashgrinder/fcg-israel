@@ -31,7 +31,7 @@
     "gulp-util": "^3.0.8",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-pngquant": "^8.0.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "smart-grid": "^2.1.2"
   },
   "dependencies": {
